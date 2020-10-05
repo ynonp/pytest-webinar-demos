@@ -1,5 +1,6 @@
 # Pytest demos
 
-Here are some demo tests. By the way - they...
+Here are some demo tests. By the way - they are ...
 
-[![Actions Status](https://github.com/{owner}/{repo}/workflows/{workflow_name}/badge.svg)](https://github.com/{owner}/{repo}/actions)
+![Tests](https://github.com/ynonp/pytest-webinar-demos/workflows/tests/badge.svg)
+
