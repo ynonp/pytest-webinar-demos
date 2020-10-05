@@ -1,7 +1,16 @@
 import requests
 import pytest
 
-@pytest.fixture(scope='module')
+def test_name():
+    with requests.Session() as s:
+        s.headers.update({
+            'Accept': 'application/json'
+        })
+        data = s.get('https://swapi.dev/api/people/1').json()
+        assert data['name'] == 'Luke Skywalker'
+
+
+@pytest.fixture(scope='session')
 def req():
     with requests.Session() as s:
         s.headers.update({
@@ -9,10 +18,4 @@ def req():
         })
 
         yield s
-
-
-def test_luke(req):
-    resp = req.get('https://swapi.co/api/people/1/')
-    data = resp.json()
-    assert data['name'] == 'Luke Skywalker'
 

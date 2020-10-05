@@ -20,6 +20,6 @@ def test_greeter_text(capfd, greeter):
 
 
 def test_greeter_age(capfd, monkeypatch, greeter):
-    monkeypatch.setattr(sys, 'stdin', io.StringIO('5'))
+    monkeypatch.setattr(sys, 'stdin', io.StringIO(u'5'))
     greeter.years_to_months()
     assert "60" in capfd.readouterr().out
