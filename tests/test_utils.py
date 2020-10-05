@@ -1,7 +1,7 @@
 import lib.utils as utils
 import pytest
 import json
-from pathlib2 import Path
+from pathlib import Path
 import codecs
 
 datafile = Path(__file__).parent / 'data' / 'twice.json'
